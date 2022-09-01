@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- copy this xsd file from: https://docs.spring.io/spring-framework/docs/4.2.x/spring-framework-reference/html/xsd-configuration.html -->
+    
+    <!-- bean definitions here -->
+    
+    <bean id="obj" class="com.sai.HelloWorld"></bean>
+    <bean id="m" class="com.sai.Marks">
+    <property name="mat" value="98.8"></property>
+     <property name="sci" value="58.8"></property>
+     <property name="bio" value="78"></property>
+    
+    
+    
+    </bean>
+    
+    <bean id="a" class="com.sai.Student">
+         <property name="id" value="1"></property>
+         <property name="name" value="sai"></property>
+         <property name="marks" ref="m"></property>
+         
+    
+    
+    </bean>
+
+</beans>
